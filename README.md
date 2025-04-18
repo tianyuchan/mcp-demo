@@ -1,5 +1,6 @@
 # MCP-Demo
 https://mcp-docs.cn/introduction
+https://github.com/modelcontextprotocol/python-sdk
 
 ## 准备环境
 * 安装 uv

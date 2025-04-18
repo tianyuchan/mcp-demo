@@ -9,7 +9,7 @@ from mcp.server.fastmcp import FastMCP
 
 
 # 初始化 FastMCP server
-mcp = FastMCP("weather")
+mcp = FastMCP("math_tools")
 
 
 @mcp.tool()

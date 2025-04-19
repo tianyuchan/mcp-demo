@@ -69,9 +69,7 @@ MCP Python SDK 中提供以下两种 MCP Server 实现方式：
 
 
 ### Client: Python Code
-使用 MCP Python SDK 编写代码实现 MCP Client：
-[src/client/client.py](src/client/client.py)
-然后测试 MCP Server，具体步骤如下：
+使用 MCP Python SDK 编写代码实现 MCP Client：[src/client/client.py](src/client/client.py)，然后测试 MCP Server，具体步骤如下：
 
 1. 运行客户端：
 ```shell

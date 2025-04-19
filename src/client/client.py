@@ -44,21 +44,23 @@ class MCPClient:
         Args:
             server_script_path: 服务器脚本的路径 (.py 或 .js)
         """
+
         is_python = server_script_path.endswith('.py')
         is_js = server_script_path.endswith('.js')
         if not (is_python or is_js):
             raise ValueError("服务器脚本必须是 .py 或 .js 文件")
         command = "python" if is_python else "node"
     
-        # 使用 StdioServerParameters 创建服务器参数
+        # 创建服务器参数
         server_params = StdioServerParameters(
             command=command,
             args=[server_script_path],
             env=None
         )
-        # 连接到 MCP 服务器，创建通信通道，并创建会话
+        # 连接 MCP 服务器，创建通信通道
         stdio_transport = await self.exit_stack.enter_async_context(stdio_client(server_params))
         self.stdio, self.write = stdio_transport
+        # 创建 MCP 客户端会话
         self.session = await self.exit_stack.enter_async_context(ClientSession(self.stdio, self.write))
         await self.session.initialize()
         # 列出可用的工具
@@ -87,7 +89,7 @@ class MCPClient:
         current_response = response
         while current_response.choices[0].message.tool_calls:
             if current_response.choices[0].message.content:
-                print("\n🤖 AI: tool_calls", json.dumps(current_response.choices[0].message))
+                print("\n🤖 AI: tool_calls", current_response.choices[0].message)
             for tool_call in current_response.choices[0].message.tool_calls:
                 tool_name = tool_call.function.name
                 raw_args = tool_call.function.arguments

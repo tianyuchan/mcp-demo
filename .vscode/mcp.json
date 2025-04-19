@@ -1,0 +1,14 @@
+{
+    "servers": {
+        "my-mcp-server-math": {
+            "type": "stdio",
+            "command": "uv",
+            "args": [
+                "--directory",
+                "/Users/cty/python/mcp-demo/src/server/",
+                "run",
+                "mcp_server_math.py"
+            ]
+        }
+    }
+}

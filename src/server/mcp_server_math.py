@@ -1,6 +1,6 @@
 """
 File   : mcp_server_math.py
-Desc   : 数学运算工具
+Desc   : 数学运算工具（Stdio, Tools, FastMCP）
 Date   : 2025/04/15
 Author : Tianyu Chen
 """

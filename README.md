@@ -48,10 +48,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 * 准备 Python 环境和依赖
 ```shell
 cd mcp-demo
-# 创建 virtual environment 并激活
-uv venv
-source .venv/bin/activate
-# 安装项目依赖
+# 创建虚拟环境并安装项目依赖
 uv sync
 ```
 * 配置 OpenAI SDK 环境变量

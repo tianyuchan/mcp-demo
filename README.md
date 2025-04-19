@@ -161,7 +161,7 @@ uv run src/server/mcp_sse_server_math.py --host 0.0.0.0 --port 8000
 1. 运行客户端：
 ```shell
 cd mcp-demo
-uv run src/client/sse_client.py http://0.0.0.0:8000/sse
+uv run src/client/sse_client.py http://localhost:8000/sse
 ```
 
 2. 测试结果：

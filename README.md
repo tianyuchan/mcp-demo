@@ -170,3 +170,7 @@ uv run src/client/sse_client.py http://localhost:8000/sse
 * https://mcp-docs.cn/introduction
 * https://github.com/modelcontextprotocol/python-sdk
 * https://blog.csdn.net/GOBinCC/article/details/146290820
+
+## TODO
+* Prompts 和 Resources 的使用
+* Low-Level Server 实现 MCP Server
